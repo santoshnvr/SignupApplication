@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignupView: View {
     @ObservedObject var signupVM = SignupViewModel()
-
+    @State private var showState = false
     @State var name: String = ""
 
 
@@ -45,7 +45,7 @@ struct SignupView: View {
             }
             
             Button {
-                print("OTHER SIGN IN OPTIONS")
+                showState.toggle()
             } label: {
                 Text("OTHER SIGN IN OPTIONS")
                     .font(.subheadline)
@@ -53,6 +53,36 @@ struct SignupView: View {
                     .foregroundColor(.green)
                     .frame(height: 40)
             }
+            .sheet(isPresented: $showState) {
+                Button {
+                    print("Facebook action")
+                } label: {
+                    Text("Facebook")
+                        .font(.subheadline)
+                        .bold()
+                        .foregroundColor(.black)
+                }
+                .frame(height: 40)
+                .frame(maxWidth: .infinity)
+                .background(.green)
+                .cornerRadius(20)
+                
+                Button {
+                    print("Twitter action")
+                } label: {
+                    Text("Twitter")
+                        .font(.subheadline)
+                        .bold()
+                        .foregroundColor(.black)
+                }
+                .frame(height: 40)
+                .frame(maxWidth: .infinity)
+                .background(.green)
+                .cornerRadius(20)
+            
+                .presentationDetents([.large, .medium, .fraction(0.75)])
+            }
+            .padding()
             
         }.padding()
     }
