@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import MyFramework
 
 @main
 struct SignupApplicationApp: App {
     var body: some Scene {
         WindowGroup {
-            SignupView()
+            SignupView(name: "")
         }
     }
 }

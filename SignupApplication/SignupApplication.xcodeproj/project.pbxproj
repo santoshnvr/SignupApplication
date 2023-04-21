@@ -8,23 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		E739FF6A29F026E00062481B /* SignupApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E739FF6929F026E00062481B /* SignupApplicationApp.swift */; };
-		E739FF6C29F026E00062481B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E739FF6B29F026E00062481B /* ContentView.swift */; };
 		E739FF6E29F026E30062481B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E739FF6D29F026E30062481B /* Assets.xcassets */; };
 		E739FF7129F026E30062481B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E739FF7029F026E30062481B /* Preview Assets.xcassets */; };
-		E739FF7829F026FD0062481B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E739FF7729F026FD0062481B /* Styles.swift */; };
-		E739FF7A29F027090062481B /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E739FF7929F027090062481B /* SignupViewModel.swift */; };
-		E739FF7C29F0272A0062481B /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E739FF7B29F0272A0062481B /* SignupView.swift */; };
+		E7C82FD729F31A7600A9EF5C /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C82FD629F31A7600A9EF5C /* MyFramework.framework */; };
+		E7C82FD829F31A7600A9EF5C /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7C82FD629F31A7600A9EF5C /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E7C82FD929F31A7600A9EF5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7C82FD829F31A7600A9EF5C /* MyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E739FF6629F026E00062481B /* SignupApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignupApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E739FF6929F026E00062481B /* SignupApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupApplicationApp.swift; sourceTree = "<group>"; };
-		E739FF6B29F026E00062481B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E739FF6D29F026E30062481B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E739FF7029F026E30062481B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E739FF7729F026FD0062481B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
-		E739FF7929F027090062481B /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
-		E739FF7B29F0272A0062481B /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		E7C82FD629F31A7600A9EF5C /* MyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C82FD729F31A7600A9EF5C /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +53,7 @@
 			children = (
 				E739FF6829F026E00062481B /* SignupApplication */,
 				E739FF6729F026E00062481B /* Products */,
+				E7C82FD529F31A7600A9EF5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				E739FF6929F026E00062481B /* SignupApplicationApp.swift */,
-				E739FF6B29F026E00062481B /* ContentView.swift */,
-				E739FF7729F026FD0062481B /* Styles.swift */,
-				E739FF7929F027090062481B /* SignupViewModel.swift */,
-				E739FF7B29F0272A0062481B /* SignupView.swift */,
 				E739FF6D29F026E30062481B /* Assets.xcassets */,
 				E739FF6F29F026E30062481B /* Preview Content */,
 			);
@@ -76,6 +83,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E7C82FD529F31A7600A9EF5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7C82FD629F31A7600A9EF5C /* MyFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +101,7 @@
 				E739FF6229F026E00062481B /* Sources */,
 				E739FF6329F026E00062481B /* Frameworks */,
 				E739FF6429F026E00062481B /* Resources */,
+				E7C82FD929F31A7600A9EF5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,11 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E739FF7829F026FD0062481B /* Styles.swift in Sources */,
-				E739FF6C29F026E00062481B /* ContentView.swift in Sources */,
-				E739FF7A29F027090062481B /* SignupViewModel.swift in Sources */,
 				E739FF6A29F026E00062481B /* SignupApplicationApp.swift in Sources */,
-				E739FF7C29F0272A0062481B /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
